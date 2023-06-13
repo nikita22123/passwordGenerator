@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Password Generator</title>
+	<link rel="stylesheet" href="style.css">
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+</head>
+<body>
+	<div class="passwordGenerator">
+		<h2>Password Generator</h2>
+		<div class="genInputSet">
+		<div id="generatorOwn">
+			<div id="password"></div>
+			</div>
+		<button class="copyClass" id="copy">Copy</button>
+	</div>
+		<div class="generatorSettings">
+				<div class="passwordLength">
+					<h3>Password length</h3>
+					<input id="pass" type="number" value="8" min = "4" max="64">
+				</div>
+				<div class="upperCase">
+					<h3>Include uppercase letters</h3>
+					<input id="isCapital" type="checkbox">
+				</div>
+				<div class="lowerCase">
+					<h3>Include lowerCase letters</h3>
+					<input id="isSmall" type="checkbox">
+				</div>
+				<div class="numbers">
+					<h3>Include numbers</h3>
+					<input id="isNumbers" type="checkbox">
+				</div>
+				<div class="symbols">
+					<h3>Include symbols</h3>
+					<input id="isSymbols" type="checkbox">
+				</div>
+		</div>
+		<button id="passwordClick">Generate Password</button>
+	</div>
+	<script
+  src="https://code.jquery.com/jquery-3.7.0.js"
+  integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM="
+  crossorigin="anonymous"></script>
+	<script src="script.js"></script>
+</body>
+</html>
