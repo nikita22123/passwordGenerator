@@ -7,6 +7,7 @@ let symbols = document.querySelector('#isSymbols');
 let copy = document.querySelector('#copy');
 let oldText = copy.textContent = "Copy";
 let rangePassword = document.querySelector('#pass');
+
 let alphabet = 
 ["a", "b", "c", "d", "e", "f", "g", "h", "i",
  "j", "k", "l", "m", "n", "o", "p", "q",
@@ -14,7 +15,7 @@ let alphabet =
 
 let alphabetSymbols =
 ["!", "#", "$", "%", "&", "(", ")", "*", "+",
- ",", "-", ".", "/",  ":", ";", "<", "=", ">", 
+ "-", "/",  ":", ";", "<", "=", ">", 
  "?", "@", "[", "]", "^", "_", "{", "}", "|", " ~ "
 ]
 
@@ -38,6 +39,8 @@ numbers.addEventListener('change', ()=> {
 symbols.addEventListener('change', ()=> {
 	isSymbols = !isSymbols;
 })
+
+
 function isTrueCheckbox(){
 	let checkboxes = [isSmall, isCapital, isNumbers, isSymbols];
 	if(checkboxes.includes(true)){
@@ -70,7 +73,19 @@ copy.addEventListener('click', function(){
 	let a = setTimeout(oldTextFunction,900);
 })
 
+function stepper(btn){
+    let id = btn.getAttribute("id");
+    let min = rangePassword.getAttribute("min");
+    let max = rangePassword.getAttribute("max");
+    let step = rangePassword.getAttribute("step");
+    let val = rangePassword.getAttribute("value");
+    let calcStep = (id == "increment") ? (step*1) : (step * -1);
+    let newValue = parseInt(val) + calcStep;
 
+    if(newValue >= min && newValue <= max){
+        rangePassword.setAttribute("value", newValue);
+    }
+}
 generateButton.addEventListener('click', function(){
 	let passwordLength = rangePassword.value;
 	let generatedPassword = "";
@@ -95,7 +110,7 @@ while(passwordLength > 0 && isHasTrueCheckbox === true){
 	}
 	if(isSymbols){
 		let amount;
-		amount = Math.floor(Math.random()* 27);
+		amount = Math.floor(Math.random()* 25);
 		generatedPassword += alphabetSymbols[amount];
 		passwordLength--;
 	}
