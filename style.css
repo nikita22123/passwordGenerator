@@ -41,6 +41,7 @@ input[type='checkbox'] {
 
 #password{
 	margin-left: 10px;
+	font-size: 36px;
 }
 #copy{
 	background:#faecfd;
@@ -49,7 +50,7 @@ input[type='checkbox'] {
 	color:#cf1e76;
 	font-weight:900;
 	font-family: 'Montserrat', sans-serif;
-	transition:0.2s;
+	transition:0.3s;
 }
 #copy:hover{
 	background:#c954a2;
@@ -64,7 +65,7 @@ input[type='checkbox'] {
 	font-family: 'Montserrat', sans-serif;
 	font-size: 20px;
 	font-weight:900;
-	transition:0.2s;
+	transition:0.4s;
 }
 #passwordClick:hover{
 	background:#ff919e;
@@ -90,10 +91,46 @@ input[type='checkbox'] {
 }
 #pass{
 	height: 20px;
-	width: 10%;
-	margin-top: 15px;
+	width: 45%;
 	text-align:center;
+	font-family: 'Montserrat', sans-serif;
+	font-weight:850;
+	font-size: 16px;
+background-color:#28b78d;
+	border:none;	
+	border-radius:50px;
+	margin-left: -5px;
 }
+.setLengthPass{
+	width:20%;
+	height: 35px;
+	display:flex;
+	flex-direction:row;
+	justify-content:space-around;
+	align-items:center;
+background-color:#28b78d;
+	border-radius:50px;
+	border:none;
+
+}
+#decrement,#increment{
+	width: 10%;
+	height: 20px;
+	display:flex;
+	text-align:center;
+	justify-content:center;
+	align-items:center;
+	font-size: 24px;
+background-color:#28b78d;
+	color:#243743;
+	border-radius:50px;
+		border:none;
+		font-weight:900;
+}
+#increment{
+	margin-left: -20px;
+}
+
 .upperCase{
 	width: 100%;
 	height: 40px;
@@ -122,3 +159,52 @@ input[type='checkbox'] {
 	flex-direction:row;
 	justify-content:space-between;
 }
+#checkboxi{
+	--width:40px;
+	--height:22px;
+	--first-color:#243743;
+	--second-color:#28b78d;
+	--offset:2px;
+}
+.checkbox_div{
+	position:relative;
+	width:var(--width);
+	height:var(--height);
+	border-radius: var(--width);
+	background-color:var(--first-color);
+		transition:0.7s;
+}
+#checkboxi input{
+	display:none;
+		transition:0.7s;
+}
+#checkboxi:hover,.setLengthPass:hover{
+	filter:brightness(1.2);
+}
+#minus:hover,#plus:hover{
+	filter:brightness(1.5);
+}
+#checkboxi,.setLengthPass{
+	margin-top: 20px;
+}
+#checkboxi input:checked  ~ .checkbox_div{
+	background-color:var(--second-color);
+transition:0.7s;
+	}
+.checkbox_div::before {
+	content: '';
+	position:absolute;
+ 	left: 4px;
+  top:2.3px;
+  width: calc(var(--height) - 2 * var(--offset));
+  height: calc(var(--height) - 2 * var(--offset));
+   background-color:var(--second-color);
+  border-radius:50%;
+  	transition:0.7s;
+
+}
+#checkboxi input:checked  ~ .checkbox_div::before{
+	background-color:var(--first-color);
+	left:20px;
+	transition:0.7s;
+	}
