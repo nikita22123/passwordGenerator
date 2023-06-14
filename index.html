@@ -19,23 +19,39 @@
 		<div class="generatorSettings">
 				<div class="passwordLength">
 					<h3>Password length</h3>
-					<input id="pass" type="number" value="8" min = "4" max="64">
+					<div class="setLengthPass">
+					<button id="decrement" onclick="stepper(this)"> <span id="minus">-</span> </button>
+					<input id="pass" type="number" value="8" min = "4" max="20" step ="1" readonly>
+					<button id="increment" onclick="stepper(this)"><span id="plus"> + </span></button>
+				</div>
 				</div>
 				<div class="upperCase">
 					<h3>Include uppercase letters</h3>
+					<label id="checkboxi" for="isCapital">
 					<input id="isCapital" type="checkbox">
+					<div class="checkbox_div"></div>
+				</label>
 				</div>
 				<div class="lowerCase">
-					<h3>Include lowercase letters</h3>
+					<h3>Include lowerCase letters</h3>
+					<label id="checkboxi" for="isSmall">
 					<input id="isSmall" type="checkbox">
+					<div class="checkbox_div"></div>
+				</label>
 				</div>
 				<div class="numbers">
 					<h3>Include numbers</h3>
-					<input id="isNumbers" type="checkbox">
+					<label id="checkboxi" for="isNumbers">
+					<input id="isNumbers" type="checkbox" checked>
+					<div class="checkbox_div"></div>
+				</label>
 				</div>
 				<div class="symbols">
 					<h3>Include symbols</h3>
+					<label id="checkboxi" for="isSymbols">
 					<input id="isSymbols" type="checkbox">
+					<div class="checkbox_div"></div>
+				</label>
 				</div>
 		</div>
 		<button id="passwordClick">Generate Password</button>
