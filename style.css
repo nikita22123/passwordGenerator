@@ -231,7 +231,8 @@ transition:0.7s;
 			width: 50%;
 		}
 		#pass{
-			width: 52%;
+			width: 40%;
+			margin-left: -15px;
 }
 	#password{
 			font-size: 22px;
@@ -284,7 +285,8 @@ transition:0.7s;
 			padding-top: 9px;
 		}
 		#pass{
-			width: 40%;
+			width: 50%;
+			margin-left: -20px;
 
 }
 .setLengthPass{
