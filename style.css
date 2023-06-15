@@ -272,7 +272,7 @@ transition:0.7s;
 			width: 55%;
 }
 	}
-		@media screen and (max-width:450px) and (min-width:330px){
+		@media screen and (max-width:450px) and (min-width:350px){
 		.passwordGenerator{
 			width: 85%;
 		}
@@ -284,10 +284,20 @@ transition:0.7s;
 			padding-top: 9px;
 		}
 		#pass{
-			width: 55%;
+			width: 40%;
+
 }
-	}
-			@media screen and (max-width:330px) and (min-width:150px){
+.setLengthPass{
+	width: 25%;
+}
+	/*#decrement,#increment{
+		width: 20%;
+	}*/
+/*#decrement span{
+	font-size: 22px;
+	}*/
+}
+			@media screen and (max-width:350px) and (min-width:150px){
 		.passwordGenerator{
 			width: 95%;
 		}
@@ -300,5 +310,8 @@ transition:0.7s;
 		}
 		#pass{
 			width: 60%;
+}
+.setLengthPass{
+	width: 25%;
 }
 	}
