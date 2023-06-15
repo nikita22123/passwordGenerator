@@ -22,7 +22,8 @@ h2{
 }
 #generatorOwn{
 	height: 45px;
-	width:90%;
+	width:80%;
+	max-width:80%;
 	font-size: 35px;
 	background:#EFEFEF4D;
 	font-family: 'Montserrat', sans-serif;	
@@ -41,7 +42,8 @@ input[type='checkbox'] {
 
 #password{
 	margin-left: 10px;
-	font-size: 36px;
+	font-size: 26px;
+	padding-top: 6px;
 }
 #copy{
 	background:#faecfd;
@@ -207,4 +209,96 @@ transition:0.7s;
 	background-color:var(--first-color);
 	left:20px;
 	transition:0.7s;
+	}
+
+	@media screen and (max-width:1260px) and (min-width:1000px){
+		.passwordGenerator{
+			width: 40%;
+		}
+		#password{
+			font-size: 23px;
+			padding-top: 8px;
+		}
+		#pass{
+			width: 50%;
+}
+#copy{
+			width: 23%;
+		}
+	}
+	@media screen and (max-width:1000px) and (min-width:800px){
+		.passwordGenerator{
+			width: 50%;
+		}
+		#pass{
+			width: 52%;
+}
+	#password{
+			font-size: 22px;
+			padding-top: 8px;
+		}
+		#copy{
+			width: 23%;
+		}
+	}
+	@media screen and (max-width:800px) and (min-width:650px){
+		.passwordGenerator{
+			width: 60%;	
+		}
+		#copy{
+			width: 24%;
+		}
+		#pass{
+			width: 53%;
+}
+	#password{
+			font-size: 20px;
+			padding-top: 8px;
+		}
+	}
+
+	@media screen and (max-width:650px) and (min-width:450px){
+		.passwordGenerator{
+			width: 70%;
+		}
+		#copy{
+			width: 25%;
+		}
+		#password{
+			font-size: 20px;
+			padding-top: 8px;
+		}
+		#pass{
+			width: 55%;
+}
+	}
+		@media screen and (max-width:450px) and (min-width:330px){
+		.passwordGenerator{
+			width: 85%;
+		}
+		#copy{
+			width: 28%;
+		}
+		#password{
+			font-size: 19px;
+			padding-top: 9px;
+		}
+		#pass{
+			width: 55%;
+}
+	}
+			@media screen and (max-width:330px) and (min-width:150px){
+		.passwordGenerator{
+			width: 95%;
+		}
+		#copy{
+			width: 36%;
+		}
+		#password{
+			font-size: 19px;
+			padding-top: 9px;
+		}
+		#pass{
+			width: 60%;
+}
 	}
